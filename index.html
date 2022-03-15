@@ -18,22 +18,22 @@
 
 </head>
 
-<body class="body">
+<body class="body index-body">
     <div class="body__inner">
         <h1 class="visually-hidden">Gllacy shop</h1>
         <header class="header">
             <div class="container">
                 <nav class="header__nav">
-                    <a href="" class="header__logo"><img src="/img/header/logo.svg" width="154" height="64" alt="" class="header__logo-img"></a>
+                    <a href="" class="header__logo"><img src="/img/header/logo.svg" width="154" height="64" alt=""></a>
                     <ul class="header__site-list">
                         <li class="header__site-item">
-                            <a href="" class="header__site-link"><img src="" alt="" class="header__site-img">Каталог</a>
+                            <a href="/pages/catalog.html" class="header__site-link">Каталог</a>
                         </li>
                         <li class="header__site-item">
-                            <a href="" class="header__site-link"><img src="" alt="" class="header__site-img">Доставка и оплата</a>
+                            <a href="" class="header__site-link">Доставка и оплата</a>
                         </li>
                         <li class="header__site-item">
-                            <a href="" class="header__site-link"><img src="" alt="" class="header__site-img">О компании</a>
+                            <a href="" class="header__site-link">О компании</a>
                         </li>
                     </ul>
                     <ul class="header__user-list">
@@ -67,7 +67,7 @@
                 <div class="header__contact">
                     <p class="header__contact-hours">с 10 до 20, ежедневно</p>
                     <p class="header__contact-tel">
-                        <a href="tel:+788124502525" class="header__contact-phone-number">
+                        <a href="tel:+788124502525">
                             8 812 450-25-25
                         </a>
                     </p>
@@ -79,11 +79,18 @@
             <h2 class="visually-hidden">Вкусные сочетания </h2>
             <ul class="slider__list container">
                 <li class="slider__item">
-                    <div class="slider__item-wrapper">
-                        <div class="slider__img-wrapper">
-                            <img src="/img/slider/3.png" alt="" class="slider__img" width="639" height="582">
-                        </div>
-                        <p class="slider__text">Пломбир с помадкой<br> и клубничный щербет</p>
+                    <div class="slider__item-inner">
+                        <p class="slider__text">Крем-брюле и пломбир<br>с малиновым джемом</p>
+                    </div>
+                </li>
+                <li class="slider__item">
+                    <div class="slider__item-inner">
+                        <p class="slider__text">Шоколадный пломбир<br>и лимонный сорбет</p>
+                    </div>
+                </li>
+                <li class="slider__item slider__item--active">
+                    <div class="slider__item-inner">
+                        <p class="slider__text">Пломбир с помадкой<br>и клубничный щербет</p>
                     </div>
                 </li>
             </ul>
@@ -92,7 +99,7 @@
                     <ul class="slider__controls-list">
                         <li class="slider__controls-item"><button type="button" class="slider__controls-btn"><span class="visually-hidden">1</span></button></li>
                         <li class="slider__controls-item"><button type="button" class="slider__controls-btn"><span class="visually-hidden">2</span></button></li>
-                        <li class="slider__controls-item"><button type="button" class="slider__controls-btn"><span class="visually-hidden">3</span></button></li>
+                        <li class="slider__controls-item"><button type="button" class="slider__controls-btn slider__controls-btn--active"><span class="visually-hidden">3</span></button></li>
                     </ul>
                     <div class="slider__get-btn-wrapper">
                         <button type="button" class="slider__controls-get-btn button">Давайте оба!</button>
@@ -101,7 +108,7 @@
 
                 <div class="slider__offers">
                     <div class="slider__offers-col">
-                        <img src="/img/slider/controls-1.jpg" alt="" class="slider__offers-bg">
+                        <img src="/img/slider/controls-1.png" alt="" class="slider__offers-bg">
                         <div class="slider__offers-wrapper">
                             <h3 class="slider__offers-title">Малинка даром!</h3>
                             <div class="slider__offers-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</div>
@@ -111,7 +118,7 @@
                         </div>
                     </div>
                     <div class="slider__offers-col">
-                        <img src="/img/slider/controls-2.jpg" alt="" class="slider__offers-bg">
+                        <img src="/img/slider/controls-2.png" alt="" class="slider__offers-bg">
                         <div class="slider__offers-wrapper">
                             <h3 class="slider__offers-title">Шоколадки даром!</h3>
                             <div class="slider__offers-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</div>
@@ -163,7 +170,7 @@
                 <div class="features__inner">
                     <header class="features__header">
                         <h2 class="visually-hidden">Наши преимущества</h2>
-                        <p class="features__subtitle">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+                        <p>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
                     </header>
                     <ul class="features__list">
                         <li class="features__item">
@@ -230,22 +237,23 @@
         </section>
         <!-- END map -->
     </div>
+    <!-- END body__inner -->
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
                 <h2 class="visually-hidden">Больше информации о нашей компании</h2>
-                <section class="footer__socials socials">
+                <section class="socials">
                     <h3 class="visually-hidden">Наши соцсети</h3>
                     <ul class="socials__list">
                         <li class="socials__item">
-                            <a href="" class="socials__link" aria-label="Facebook">
+                            <a href="" aria-label="Facebook">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM20.06 9.45H17V12.9H20V16.34H17V25H14V16.34H11V12.9H14V9.45C13.9449 8.59575 14.2291 7.75426 14.7908 7.1083C15.3525 6.46234 16.1464 6.06407 17 6H20V9.45H20.06Z" fill="white" fill-opacity="0.8"/>
                                     </svg>
                             </a>
                         </li>
                         <li class="socials__item">
-                            <a href="" class="socials__link" aria-label="Vkontakte">
+                            <a href="" aria-label="Vkontakte">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.64 14.49C16.9652 14.4904 17.2875 14.4293 17.59 14.31C17.8645 14.2077 18.0922 14.0085 18.23 13.75C18.3343 13.4964 18.3854 13.2241 18.38 12.95C18.376 12.7057 18.3143 12.4659 18.2 12.25C18.0714 12.0066 17.8523 11.8235 17.59 11.74C17.2687 11.627 16.9306 11.5695 16.59 11.57H14.59V14.57H15.16C15.75 14.52 16.24 14.51 16.64 14.49Z" fill="white" fill-opacity="0.8"/>
                                     <path d="M18.12 17.08C17.751 17.0101 17.3752 16.9832 17 17H14.61V20.5H17.06C17.4757 20.4953 17.8865 20.4104 18.27 20.25C18.591 20.1392 18.8632 19.9199 19.04 19.63C19.1865 19.3527 19.2621 19.0436 19.26 18.73C19.2753 18.3782 19.1848 18.0298 19 17.73C18.7922 17.4167 18.4806 17.1865 18.12 17.08Z" fill="white" fill-opacity="0.8"/>
@@ -254,7 +262,7 @@
                             </a>
                         </li>
                         <li class="socials__item">
-                            <a href="" class="socials__link" aria-label="Instagram">
+                            <a href="" aria-label="Instagram">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g opacity="0.8">
                                     <path d="M20.92 16C20.92 17.3155 20.3974 18.5771 19.4673 19.5072C18.5371 20.4374 17.2755 20.96 15.96 20.96C14.6445 20.96 13.3829 20.4374 12.4528 19.5072C11.5226 18.5771 11 17.3155 11 16C11.001 15.6158 11.048 15.233 11.14 14.86H10.24V21.7H21.64V14.86H20.74C20.8406 15.2325 20.901 15.6147 20.92 16Z" fill="white"/>
@@ -266,7 +274,7 @@
                             </a>
                         </li>
                         <li class="socials__item">
-                            <a href="" class="socials__link" aria-label="Twitter">
+                            <a href="" aria-label="Twitter">
                                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM23.94 12.81C23.69 19.33 20.48 23.64 12.94 23.51H12.46C12.01 23.51 7.91001 23.07 7.11001 21.69C8.8989 21.9555 10.7228 21.5494 12.23 20.55C11.18 20.26 9.31001 20.09 8.98001 17.7C9.39279 17.8642 9.84415 17.9058 10.28 17.82C9.00001 17 7.53001 16.3 7.61001 14.17C8.02796 14.4893 8.54454 14.652 9.07001 14.63C8.30001 14.4 6.92001 11.39 8.07001 9.85C10.07 11.64 12.14 13.33 15.87 13.49C16.1 11.28 17.11 9.79 19.04 9.17C19.7375 8.93332 20.4908 8.91568 21.1986 9.11946C21.9065 9.32323 22.5351 9.73867 23 10.31C23.74 10.08 24.45 9.84 25.19 9.62C25.1758 9.95711 25.0846 10.2865 24.9234 10.5829C24.7622 10.8793 24.5353 11.1349 24.26 11.33C24.5167 11.3601 24.7768 11.3336 25.0221 11.2524C25.2674 11.1712 25.492 11.0372 25.68 10.86C25.5628 11.2985 25.3443 11.7034 25.0421 12.0421C24.7399 12.3808 24.3624 12.6438 23.94 12.81Z" fill="white" fill-opacity="0.8"/>
                                     </svg>
@@ -275,7 +283,7 @@
                         </li>
                     </ul>
                 </section>
-                <section class="footer__more more">
+                <section class="more">
                     <h3 class="visually-hidden">Дополнительная информация</h3>
                     <ul class="more__list">
                         <li class="more__item">
@@ -292,11 +300,11 @@
                         </li>
                     </ul>
                 </section>
-                <section class="footer__copyrights copyrights">
+                <section class="copyrights">
                     <h3 class="visually-hidden">Права копирайта</h3>
                     <p class="copyrights__paragraph ">
                         <a href="" class="copyrights__logo">
-                            <img src="/img/copyrights/logo.svg" alt="" class="copyrights__logo-img" width="108" height="39">
+                            <img src="/img/copyrights/logo.svg" alt="" width="108" height="39">
                         </a>
                     </p>
                     <p class="copyrights__paragraph">
@@ -306,6 +314,7 @@
             </div>
         </div>
     </footer>
+    <!-- END footer -->
 </body>
 
 </html>

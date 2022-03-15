@@ -1,0 +1,180 @@
+.catalog-body {
+    background-color: #849D8F;
+}
+
+.catalog-main {
+    padding-top: 132px;
+}
+
+.controls {
+    &__product-name {
+        margin-bottom: 29px;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 41px;
+        color: #FFFFFF;
+    }
+    &__form {
+        width: 884px;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+    &__form-item {
+        margin-right: 15px;
+        margin-bottom: 14px;
+    }
+    &__form-item--button {
+        display: flex;
+        align-items: end;
+    }
+    &__conditions {
+        display: flex;
+        align-items: center;
+        height: 36px;
+        &>* {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+    &__conditions,
+    &__button {
+        background-color: rgba(#FFFFFF, 0.2);
+        border-radius: 20px;
+        border: none;
+    }
+    &__title {
+        padding-left: 16px;
+        margin-bottom: 7px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+    &__conditions {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    &__conditions--filler {
+        display: flex;
+        align-items: center;
+    }
+    &__select {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #FFFFFF;
+        background-color: transparent;
+        border: none;
+    }
+    &__option {}
+    &__scale {
+        display: flex;
+        position: relative;
+    }
+    &__main-line {
+        width: 176px;
+        height: 2px;
+        background-color: rgba(#F8F7F4, 0.5);
+    }
+    &__progress-line {
+        left: 39px;
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background-color: #F8F7F4;
+    }
+    &__scale-button {
+        position: absolute;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: #ABABAB;
+        border-radius: 50%;
+        border: 8px solid #FFFFFF;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    &__scale-button--min {
+        left: 29px;
+    }
+    &__scale-button--max {
+        right: 61px;
+    }
+    &__fat-label {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: 19px;
+        cursor: pointer;
+        &::before {
+            content: "";
+            display: block;
+            margin-right: 11px;
+            width: 22px;
+            height: 22px;
+            background-color: transparent;
+            border: 3.5px solid rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+        }
+        &::after {
+            content: "";
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 7px;
+            margin-right: 11px;
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__fat-input {
+        &:checked+label::after {
+            display: block;
+        }
+    }
+    &__input-filler {}
+    &__button {
+        padding: 7px 27px;
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        border: 2px solid #FFFFFF;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    &__input-filler:checked+label::before {
+        background-image: url(../img/catalog/checkbox-on.svg);
+    }
+    &__checkbox-label {
+        display: flex;
+        margin-right: 22px;
+        &::before {
+            content: "";
+            display: block;
+            margin-right: 8px;
+            width: 24px;
+            height: 20px;
+            background: url(../img/catalog/checkbox-off.svg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.catalog-controls {}

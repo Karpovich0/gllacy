@@ -16,6 +16,12 @@ $black: #323232;
     }
 }
 
+.index-body {
+    background-image: url(../img/slider/3.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
 // END body
 .button {
     padding: 14px 19px 13px;
@@ -51,11 +57,10 @@ $black: #323232;
     &__logo {
         margin-right: 11px;
     }
-    &__logo-img {}
     &__site-list {
         display: flex;
         margin-right: auto;
-    }
+    } //move css from item to link!!!!!!!
     &__site-item {
         margin-right: 6px;
         padding: 9px 13px 11px;
@@ -73,10 +78,12 @@ $black: #323232;
             background-color: $white;
         }
     }
+    &__site-item--current {
+        background-color: #D07058;
+    }
     &__site-link {
         border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: 0.2);
     }
-    &__site-img {}
     &__user-list {
         display: flex;
     }
@@ -131,6 +138,43 @@ $black: #323232;
         flex-direction: column;
         align-items: flex-end;
     }
+    &__contact--with-breadcrumbs {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__contact-list {
+        display: flex;
+    }
+    &__contact-item {
+        display: flex;
+        align-items: center;
+        padding-right: 8px;
+        &::after {
+            content: "";
+            margin-left: 8px;
+            width: 6px;
+            height: 6px;
+            background-image: url(../img/header/arrow.svg);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+        &:last-child {
+            padding-right: 0;
+            &::after {
+                content: none;
+            }
+        }
+    }
+    &__contact-link {
+        border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: 0.2);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        &--current {
+            border-bottom: none;
+        }
+    }
     &__contact-hours {
         margin-bottom: 8px;
         font-weight: bold;
@@ -142,7 +186,6 @@ $black: #323232;
         font-size: 22px;
         line-height: 24px;
     }
-    &__contact-phone-number {}
 }
 
 // END header
@@ -153,42 +196,30 @@ $black: #323232;
 }
 
 .slider {
-    display: grid;
-    grid-template-rows: 1fr 332px;
+    padding-top: 398px;
     margin-bottom: 40px;
     &__list {
-        grid-column: 1/2;
-        grid-row: 1/3;
-        z-index: -20;
         padding: 0;
-        height: 876px;
+        margin-bottom: 26px;
+        max-height: 876px;
+        height: 100%;
     }
     &__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: none;
     }
-    &__item-wrapper {
-        position: relative;
+    &__item--active {
+        display: block;
     }
-    &__img-wrapper {
-        border-radius: 50%;
-        background: rgba(239, 224, 218, 0.75);
-        // filter: blur(250px);
-    }
-    &__img {}
-    &__text {
-        position: absolute;
-        z-index: 20;
-        top: 52%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    &__item-inner {
+        margin: 0 auto;
         width: 100%;
         max-width: 672px;
+    }
+    &__text {
         font-weight: bold;
         font-size: 60px;
-        line-height: 60px;
         text-align: center;
+        line-height: 60px;
         color: #FFFFFF;
     }
     &__content {
@@ -218,7 +249,8 @@ $black: #323232;
         border-radius: 50%;
         transition: background-color 0.2s linear;
         cursor: pointer;
-        &:hover {
+        &:hover,
+        &--active {
             background-color: $white;
         }
     }
@@ -339,7 +371,6 @@ $black: #323232;
         font-size: 24px;
         line-height: 30px;
     }
-    &__subtitle {}
     &__list {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -483,9 +514,6 @@ $black: #323232;
         display: flex;
         justify-content: space-between;
     }
-    &__socials {}
-    &__more {}
-    &__copyrights {}
 }
 
 .socials {
@@ -506,7 +534,6 @@ $black: #323232;
             display: block;
         }
     }
-    &__link {}
 }
 
 .more {
@@ -553,7 +580,6 @@ $black: #323232;
         display: block;
         padding-bottom: 5px;
     }
-    &__logo-img {}
     &__paragraph {
         font-style: normal;
         font-weight: normal;
@@ -565,3 +591,7 @@ $black: #323232;
         border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: 0.2);
     }
 }
+
+// END copyrights
+// END index.html styles
+@import "../pages/_catalog.scss";
