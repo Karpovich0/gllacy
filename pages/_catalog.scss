@@ -2,11 +2,23 @@
     background-color: #849D8F;
 }
 
+.top-gradient {
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 650px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 .catalog-main {
-    padding-top: 132px;
+    padding-top: 117px;
 }
 
 .controls {
+    margin-bottom: 26px;
     &__product-name {
         margin-bottom: 29px;
         font-weight: 700;
@@ -47,7 +59,7 @@
     }
     &__title {
         padding-left: 16px;
-        margin-bottom: 7px;
+        margin-bottom: 4px;
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
@@ -173,6 +185,64 @@
         }
         &:last-child {
             margin-right: 0;
+        }
+    }
+}
+
+// END controls
+.pages-nav {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(#FFFFFF, 0.2);
+    &__inner {
+        width: 194px;
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 8.5px;
+            height: 8.5px;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            cursor: pointer;
+        }
+        &::before {
+            left: 0;
+            transform: translateY(-50%) rotate(45deg);
+            opacity: 0.2;
+        }
+        &::after {
+            right: 0;
+            transform: translateY(-50%) rotate(-135deg);
+        }
+    }
+    &__list {
+        display: flex;
+        margin: 0 23px;
+        overflow: hidden;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        margin-right: 4.5px;
+        width: 26px;
+        height: 26px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #FFFFFF;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover,
+        &--current {
+            color: #323232;
+            background-color: #fff;
         }
     }
 }
